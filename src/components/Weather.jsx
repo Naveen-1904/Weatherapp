@@ -58,7 +58,7 @@ function Weather() {
     }
   }
   useEffect( () => {
-    search("Delhi");
+    search("Visakhapatnam");
   },[])
 
   return (
@@ -68,7 +68,7 @@ function Weather() {
         <img src={search_icon} alt="Search" onClick={()=>search(inputRef.current.value)}/>
       </div>
       {weatherData?<>
-      <img src={clear_icon} alt='Weather_Icon'className='weather-icon'/>
+      <img src={weatherData.icon} alt='Weather_Icon'className='weather-icon'/>
       <p className='temperature'>{weatherData.temperature}°c</p>
       <p className='location'>{weatherData.location}</p>
       <div className="weather-data">
